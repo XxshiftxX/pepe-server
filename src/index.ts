@@ -1,8 +1,10 @@
 import * as express from 'express';
+import config from './config';
+
 import logger from './logger';
 
 const app = express();
-const port = 3000;
+const { port } = config.app;
 
 app.get('/', (req, res) => res.json({ result: 'Hello World!' }));
 
