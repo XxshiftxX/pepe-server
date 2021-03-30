@@ -1,3 +1,5 @@
+export type Choice = { title: string, weights: number[] };
+export type Question = { title: string, choices: Choice[] };
 export class Test {
   id: string;
 
@@ -5,7 +7,3 @@ export class Test {
 
   questions: Question[] = [];
 }
-
-export type Question = { title: string, choices: Choice[] };
-
-export type Choice = { title: string, weights: number[] };
