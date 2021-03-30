@@ -3,7 +3,7 @@ module.exports = {
   plugins: ['@typescript-eslint'],
   extends: [
     'airbnb-base',
-    'plugin:@typescript-eslint/eslint-recommended'
+    'plugin:@typescript-eslint/eslint-recommended',
   ],
   rules: {
     'no-underscore-dangle': 0,
@@ -12,5 +12,7 @@ module.exports = {
     'no-unused-expressions': 0,
     'import/no-unresolved': 0,
     'linebreak-style': 0,
-  }
+    'import/prefer-default-export': 0,
+    'no-unused-vars': 0,
+  },
 };
