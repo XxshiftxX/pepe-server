@@ -1,9 +1,14 @@
-export type Choice = { title: string, weights: number[] };
-export type Question = { title: string, choices: Choice[] };
-export class Test {
-  id: string;
+import { Column, Entity, ObjectID, ObjectIdColumn } from 'typeorm';
+import { Question } from './question.entity';
 
+@Entity()
+export class Test {
+  @ObjectIdColumn()
+  id: ObjectID;
+
+  @Column()
   title: string;
 
+  @Column((type) => Question)
   questions: Question[] = [];
 }
