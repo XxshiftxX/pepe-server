@@ -1,10 +1,14 @@
 import { Request, Response, Router } from 'express';
 
+import * as service from './service';
+
 export const router = Router();
 
-export const getTest = (req: Request, res: Response) => {
+export const getTest = async (req: Request, res: Response) => {
   const { testId } = req.params;
 
-  res.json({ testId });
+  const test = await service.getTest(testId);
+
+  res.json({ test });
 };
 router.use('/:testId', getTest);

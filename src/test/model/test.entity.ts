@@ -4,7 +4,7 @@ import { Question } from './question.entity';
 @Entity()
 export class Test {
   @ObjectIdColumn()
-  id: ObjectID;
+  id: string;
 
   @Column()
   title: string;
