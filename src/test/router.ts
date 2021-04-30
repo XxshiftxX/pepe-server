@@ -9,6 +9,12 @@ export const getTest = async (req: Request, res: Response) => {
 
   const test = await service.getTest(testId);
 
-  res.json({ test });
+  res.json(test);
 };
 router.use('/:testId', getTest);
+
+export const createTest = async (req: Request, res: Response) => {
+  const { testId } = req.params;
+
+  const test = await service.getTest(testId);
+};
