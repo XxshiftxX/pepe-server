@@ -1,6 +1,7 @@
 import 'reflect-metadata';
 
 import * as express from 'express';
+import * as cors from 'cors';
 import { createConnection } from 'typeorm';
 
 import config from './config';
@@ -12,6 +13,7 @@ const app = express();
 const { port } = config.app;
 
 app.use(express.json());
+app.use(cors());
 
 app.use('/tests', testRouter);
 
